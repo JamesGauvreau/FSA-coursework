@@ -40,8 +40,10 @@ const coupon = (coupon, subscriptionAmount) => {
 
 // Return, log the string `Your grand total is ${grandTotal}.`
 
-const grandTotal = (couponAmount) => {
-    console.log(`Your grand total is ${couponAmount}`);
+const grandTotal = (customer) => {
+    const subscriptionAmount = subscription(customer.subscription, customer.pricePerRefill, customer.refills);
+    const finalAmount = coupon(customer.coupon, subscriptionAmount);
+    console.log(`Your grand total is ${finalAmount}`);
 }
 
-grandTotal(coupon(sarah.coupon, subscription(sarah.subscription, sarah.pricePerRefill, sarah.refills)));
+grandTotal(timmy);
