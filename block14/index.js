@@ -2,14 +2,14 @@
 // Create variable for input array
 // Create variable for output (odds) array
 // Check even step for odds/evens; bypass evens and splice odds into output array 
-// Print result of output array
+// Log result of output array
 
-    const oddsInput = [2, 4, 6, 8, 10, 11, 12]
+    const oddsInput = [2, 4, 6, 8, 10, 11, 12, 13, 19]
     let oddsOutput = [ ] 
 
-    for(let i=0; i<oddsInput.length; i++){
-        if (oddsInput[i] % 2 !== 0) {
-            oddsOutput.push(oddsInput[i]);
+    for(let dog=0; dog<oddsInput.length; dog++){
+        if (oddsInput[dog] % 2 !== 0) {
+            oddsOutput.push(oddsInput[dog]);
             }
         }
 
@@ -73,7 +73,7 @@ let reverseArray = []
 for (let i = 0; i < verseArray.length; i++)
     reverseArray.unshift(verseArray[i])
 
-console.log(`Reverse Array result: ${reverseArray}`)
+document.write(`<b>Reverse</b> Array <br>result: <br>${reverseArray}<br>`)
 
 // ## FizzBuzz
 // build input and output arrays
