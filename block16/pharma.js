@@ -22,7 +22,7 @@ const rocky = {
     coupon: true,
 }
 
-// Determine whether the customer has a subscription: 25% discount if yes.
+// Determine whether the customer has a subscription; if so, apply 25% discount.
 const subscription = (subscription, pricePerRefill, refills) => {
     if (subscription) {
         return pricePerRefill * refills * 0.75;
@@ -30,7 +30,7 @@ const subscription = (subscription, pricePerRefill, refills) => {
     return pricePerRefill * refills;    
 }
 
-    // Determine whether the customer has a coupon: -10$ discount after subscription is calculated. 
+    // Determine whether the customer has a coupon; if so, apply -$10 discount after subscription is calculated. 
 const coupon = (coupon, subscriptionAmount) => {
     if (coupon) {
         return subscriptionAmount - 10;
