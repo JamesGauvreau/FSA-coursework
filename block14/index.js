@@ -1,19 +1,19 @@
 // ## Only Odds
 // Create variable for input array
 // Create variable for output (odds) array
-// Check even step for odds/evens; bypass evens and splice odds into output array 
+// Check even step for odds/evens; bypass evens and splice odds into output array
 // Log result of output array
 
-    const oddsInput = [2, 4, 6, 8, 10, 11, 12, 13, 19]
-    let oddsOutput = [ ] 
+const oddsInput = [2, 4, 6, 8, 10, 11, 12, 13, 19];
+let oddsOutput = [];
 
-    for(let dog=0; dog<oddsInput.length; dog++){
-        if (oddsInput[dog] % 2 !== 0) {
-            oddsOutput.push(oddsInput[dog]);
-            }
-        }
+for (let dog = 0; dog < oddsInput.length; dog++) {
+  if (oddsInput[dog] % 2 !== 0) {
+    oddsOutput.push(oddsInput[dog]);
+  }
+}
 
-        console.log(`Only Odds result: ${oddsOutput}`)
+console.log(`Only Odds result: ${oddsOutput}`);
 
 // for (let i = 0; i < 5; i++) {
 //   if (oddsInput % 2 === 0)
@@ -27,60 +27,52 @@
 // ## Vowels vs Consonant
 // Create variable for input
 // Create variables to track vowels and consonants
-// Create loop for vowels, built on if/else 
+// Create loop for vowels, built on if/else
 // If no vowel is detected, increment consonantsCounter
-// Log result. 
+// Log result.
 
-const letterSample = "textbook"
+const letterSample = "textbook";
 let vowelsCounter = 0;
 let consonantsCounter = 0;
 
 for (let i = 0; i < letterSample.length; i++) {
   if (letterSample[i] === "a") {
-    vowelsCounter++
+    vowelsCounter++;
+  } else if (letterSample[i] === "e") {
+    vowelsCounter++;
+  } else if (letterSample[i] === "i") {
+    vowelsCounter++;
+  } else if (letterSample[i] === "o") {
+    vowelsCounter++;
+  } else if (letterSample[i] === "u") {
+    vowelsCounter++;
+  } else {
+    consonantsCounter++;
   }
-    else 
-    if (letterSample[i] === "e") {
-        vowelsCounter++
-      }
-      else 
-      if (letterSample[i] === "i") {
-          vowelsCounter++
-        }
-        else 
-        if (letterSample[i] === "o") {
-            vowelsCounter++
-          }
-          else 
-          if (letterSample[i] === "u") {
-              vowelsCounter++
-            }
-            else {
-                consonantsCounter++
-            }
 }
 
-console.log(`Vowels vs Consonants result: "${letterSample}" has ${consonantsCounter} consonants and ${vowelsCounter} vowels`)
+console.log(
+  `Vowels vs Consonants result: "${letterSample}" has ${consonantsCounter} consonants and ${vowelsCounter} vowels`
+);
 
 // ## Reverse Array
 // Create input array and output array (empty by default)
 // Take each item from input array and put it at the front of the output array
 // Print result
 
-const verseArray = [1, -1, 2, -3, 5, -8, 13]
-let reverseArray = []
+const verseArray = [1, -1, 2, -3, 5, -8, 13];
+let reverseArray = [];
 
-for (let i = 0; i < verseArray.length; i++)
-    reverseArray.unshift(verseArray[i])
+for (let i = 0; i < verseArray.length; i++) reverseArray.unshift(verseArray[i]);
 
-document.write(`<b>Reverse</b> Array <br>result: <br>${reverseArray}<br>`)
+document.write(`<b>Reverse</b> Array <br>result: <br>${reverseArray}<br>`);
 
 // ## FizzBuzz
 // build input and output arrays
 // build number sequence
 // sift with "for", checking in following order: not cleanly divisible by 3 or
-    // 5, not cleanly divisible by 3 && 5, cleanly divisible by 3, cleanly divisible
-    // by 5
+// 5, not cleanly divisible by 3 && 5, cleanly divisible by 3, cleanly divisible
+// by 5
 // replace 3s and 5s as appropriate
 // log result
 
@@ -88,26 +80,18 @@ let countArray = [];
 let fizzyArray = [];
 
 for (let i = 1; i <= 100; i++) {
-    countArray.push(i);
+  countArray.push(i);
 }
 
-for (let i = 0; i <= 100; i++) 
-    if ((countArray[i] % 3 !== 0) && (countArray[i] % 5 !== 0)) {
-    fizzyArray.push(countArray[i])
-}
-    else
-    if((countArray[i] % 3 === 0) && (countArray[i] % 5 !== 0)) {
-        fizzyArray.push(`Fizz`)
-    }
-        else
-        if((countArray[i] % 3 !== 0) && (countArray[i] % 5 === 0)) {
-            fizzyArray.push(`Buzz`)
-        }
-            else
-            if((countArray[i] % 3 === 0) && (countArray[i] % 5 === 0)) {
-                fizzyArray.push('FizzBuzz')
-            }
-                else
-                fizzyArray.push('ERROR')
-                
+for (let i = 0; i <= 100; i++)
+  if (countArray[i] % 3 !== 0 && countArray[i] % 5 !== 0) {
+    fizzyArray.push(countArray[i]);
+  } else if (countArray[i] % 3 === 0 && countArray[i] % 5 !== 0) {
+    fizzyArray.push(`Fizz`);
+  } else if (countArray[i] % 3 !== 0 && countArray[i] % 5 === 0) {
+    fizzyArray.push(`Buzz`);
+  } else if (countArray[i] % 3 === 0 && countArray[i] % 5 === 0) {
+    fizzyArray.push("FizzBuzz");
+  } else fizzyArray.push("ERROR");
+
 console.log(`FizzBuzz: ${fizzyArray}`);
