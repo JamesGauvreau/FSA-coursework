@@ -72,3 +72,41 @@ const importedBeans = menuSeasonal.filter((drink) => {
 })
 
 console.log(importedBeans)
+
+// ::Simple-sum
+// Function w/ array of two 
+
+const simpleSum = (num1, num2) => {
+    return num1 + num2
+}
+
+// Functions can be written as 
+    // const functionName = (parameter1, etc) => {
+// or
+    // function functionName(parameter1, etc) {
+// In both cases, you would log it as
+    // console.log(functionName(argument1, etc))
+// "return" means that a value is returned to functionName and the function concludes. 
+// Functions are called when the function is provided with parens — if no inputs, though, then it might throw an error. 
+
+console.log(simpleSum(1, 5))
+
+console.log(simpleSum(simpleSum(3, 4), simpleSum(1, 5)))
+
+const dogNumber = simpleSum(simpleSum(3, 4), simpleSum(1, 5)); 
+
+console.log(`dogNumber = ${dogNumber}`)
+
+const mySlice = (textValue, startValue, endValue) => {
+    let result = []; // <= this signifies a flexible variable and an empty array
+    from = Math.max(startValue, 0); // Math.max will give the largest of the input parameter numbers. We want "start" but include 0 so that an error won't give us infinity.  
+    to = Math.min(endValue); // Math.min will give the smallest of the input parameter numbers. 
+
+    if((!endValue) || (endValue > textValue.length)) {    // The two pipes (II) are a "logical OR," so this will return true if either of the parenthetical arguments is true. This will
+                                                // be true if there is no end value or if the end value is greater than the length of the textValue.
+        for(let i = from; i<textValue.length; i++ {   // "i = from" is the initialization, creating a counter variable. If "var" then non-local to the loop; if let, then local.
+                                                // "i<arr.length" is the condition, which is evaluated before each loop iteration. If true, then the loop executes. In this
+                                                    // case that would mean that the loop executes if and only if "i" is smaller than the value of textValue.length. 
+        } 
+    }
+}
