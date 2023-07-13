@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <title>Salt's Quote Page</title>
+    <script src="quote.js" defer></script>
+</head>
+<body>
+    <h1>This is a header</h1>
+    <button>Click me!</button>
+    <p id="htmlKanye"></p>
+    <form name="numForm" action="" method="GET"> <!-- name="myForm" names the form. action="" means that the form won't be sent anywhere. method="GET" means the data is URL-encoded. This is okay if security isn't a problem.  -->
+        What is your favorite number? <br>
+        <input type="text" name="inputbox" value="">
+        <input type="button" name="button" value="Submit" onClick="testResults(this.form)">
+<script>function testResults (form) {
+    const inputValue = form.inputbox.value;
+    alert ("You typed: " + inputValue);
+}</script>
+    <p id="MTG"></p>
+</body>
+</html>
