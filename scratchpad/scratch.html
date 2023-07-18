@@ -1,15 +1,20 @@
 <!DOCTYPE html>
+<html lang="en"> 
+<!-- -->
 
 <head>
     <title>Salt's Scratchpad</title>
-    <link rel="stylesheet" href="scratch.css">
+    <meta charset="UTF-8">
+    <!--  -->
+    <link rel="stylesheet" href="./scratch.css">
     <!-- This links the page to a CSS file. `rel` describes the relationship
     between this document and the linked document. It is only used if `href` is
     present. Search engines will read it. -->
     <!-- TODO Why do CSS files use `href` and JS files use `src`? -->
-    <script src="/scratch.js" defer></script>
+    <script src="./scratch.js" defer></script>
     <!-- This links the page to a JS file. `defer` means that the script
         won't run until everything has been read.  -->
+    <script src="./song-api.js" defer></script>
 </head>
 
 <body>
@@ -42,7 +47,17 @@
             and <a href="https://webaim.org/resources/designers/#infographic">WebAIM's Accessibility page</a> in order
             to build these properly.</figcaption>
     </figure>
-    <p>Blocks left to harvest:</p>
+    <h1>Javascript</h1>
+    <h2>Operators</h2>
+    <p><samp>( = )</samp> is an assignment operator, which assigns values to variables. <samp>( == )</samp> is a loose equality operator, which will attempt to convert and compare operands of different types. <samp>( === )</samp> is a strict equality operator that compares two operands and checks whether both value and type are equal. <samp>( != )</samp> is a loose inequality operator, and <samp>( !== )</samp> is a strict inequality operator.</p>
+    <p>Comparison operators (like those above and those to come) can return either <samp>true</samp> or <samp>false</samp>. The operator <samp>===</samp> means "equal value and equal type." The operator <samp>!==</samp> means "not equal value or not equal type." When using "greater (or lesser) than or equal" the operators <samp>&gt=</samp> and <samp>&lt=</samp> should be used, with the equals sign on the right-hand side.</p>
+    <p><samp>( ! )</samp> reverses the value of a boolean. <samp>( && )</samp> returns <samp>true</samp> iff (not a typo) the operands are true. <samp>( || )</samp> returns <samp>true</samp> if at least one of the operations is true.</p>
+    <h1>APIs</h1>
+    <p>Effective use of APIs is an important component of work with Javascript, so they deserve their own section.</p>
+    <div id="new-song-form"></div>
+    <div id="song-container"></div>
+    <h1>Blocks left to harvest:</h1>
+    <p>These are blocks whose work I haven't yet spliced into the scratchpad.</p>
     <ul>
         <li>Block06</li>
         <li>Block07</li>
@@ -55,6 +70,51 @@
         <li>Block20</li>
         <li>Block20b</li>
         <li>Block22</li>
+    </ul>
+    <p>These are blocks whose guided practices I haven't yet spliced into the scratchpad.</p>
+    <ul>
+        <li>Block 1</li>
+        <li>Block 2</li>
+        <li>Block 3</li>
+        <li>Block 4</li>
+        <li>Block 5</li>
+        <li>Block 6</li>
+        <li>Block 8</li>
+        <li>Block 9</li>
+        <li>Block 10</li>
+        <li>Block 11</li>
+        <li>Block 12</li>
+        <li>Block 13</li>
+        <li>Block 14</li>
+        <li>Block 15</li>
+        <li>Block 16</li>
+        <li>Block 17</li>
+        <li>Block 19</li>
+        <li>Block 20</li>
+        <li>Block 22</li>
+    </ul>
+    <p>These are blocks whose PowerPoints I haven't yet spliced into the scratchpad.</p>
+    <ul>
+        <li>Block 1</li>
+        <li>Block 2</li>
+        <li>Block 3</li>
+        <li>Block 4</li>
+        <li>Block 5</li>
+        <li>Block 6</li>
+        <li>Block 7</li>
+        <li>Block 8</li>
+        <li>Block 9</li>
+        <li>Block 10</li>
+        <li>Block 11</li>
+        <li>Block 12</li>
+        <li>Block 13</li>
+        <li>Block 14</li>
+        <li>Block 15</li>
+        <li>Block 16</li>
+        <li>Block 17</li>
+        <li>Block 19</li>
+        <li>Block 20</li>
+        <li>Block 22</li>
     </ul>
     <p>Programs should have readme files, preferably in .md (markdown) format.</p>
 </body>

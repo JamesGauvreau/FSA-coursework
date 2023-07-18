@@ -30,3 +30,24 @@ magicNumber()
 
 button.addEventListener(`click`, kanye)
 button.addEventListener(`click`, magicNumber)
+
+
+const pokemonRenderAll = async () => {
+    const listPoke = await pokemonCatch();
+    const listData = await listPoke;
+  
+    const listName = listData.map((array) => {
+        const a1 = array.url.split(`/`);
+        const a2 = a1[6];
+
+        const pokemonUl = document.querySelector(`ul`);
+        const pokemonLi = document.createElement(`li`);
+
+        pokemonLi.innerHTML = a1[6].name;
+        pokemonUl.appendChild(pokemonLi);
+   })
+
+    //     return `<li>${array.name}</li>`
+    // }).join('');
+    // document.querySelector(`ul`).innerHTML = `${listName}`;
+}
