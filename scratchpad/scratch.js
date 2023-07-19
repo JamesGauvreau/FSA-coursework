@@ -1,7 +1,7 @@
 console.log(`Run "node scratch.js" to test this!`) 
     // This will run in the debug console. The `node` command will log it in
     // the terminal.
-
+ 
 const cowNum = 50;
 console.log(`There are ${cowNum} cows`);
 const firstNum = 5;
@@ -24,6 +24,24 @@ if (ifNum % 2 === 0) {
 }
 console.log(ifTest);     
 
+// Local API stuff
+const localHost_URL = `http://localhost:3000/`
+
+const fetchAllUsers = async () => {
+    try {
+        const response = await fetch(`${localHost_URL}`);
+        const data = await response.json();
+        console.log(`confirm fetchAllUsers `)
+        // return data;
+    }
+    catch (error) {
+        console.log(`you fucked up: fetchAllUsers`);
+    }
+}
+
+// const init =
+
+fetchAllUsers()
     
 // alert(`This is a test alert! I apologize for all the times that you're going to see this.`)
     // I've commented out this alert because I don't want to deal with it every

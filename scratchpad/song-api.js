@@ -212,7 +212,6 @@ const renderAllSongs = (songList) => {
         // array
 
         const div = document.createElement(`div`);
-
         const divHTML = `
             <h3>${title}</h3>
             <p>Artist: ${artist.name}</p>
