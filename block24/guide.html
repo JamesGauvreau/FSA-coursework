@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <section id="root"></section>
+
+    <script type="text/babel">
+        const container = document.querySelector(`#root`);
+        console.log(container)
+
+        const App = () => {
+            return (
+                <section>
+                    <h1>React!</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo temporibus fugit at. Qui quis libero, eum nesciunt magni autem facere debitis vero hic id voluptate cum veniam corporis repudiandae nobis.</p>
+                </section>
+            );
+        }
+        const root = ReactDOM.createRoot(container);
+        root.render(<App />);
+    </script>
+
+
+</body>
+
+</html>
