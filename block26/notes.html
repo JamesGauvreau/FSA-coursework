@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Notes 7/26</title>
+    <script src="./dist/main.js" defer></script>
+    <script>console.log(`html test`)</script>
+</head>
+
+<body>
+    <section id="root"></section>
+</body>
+
+</html>
+
+<!-- 
+    package.json is like cdn but you don't need it in your html page.
+
+    Do not push up node modules to GitHub! Any time that you use npm i, it'll
+    download all the packages listed in your dependencies, so you need
+    "node_modules" in your gitignore. If you pull down code from GitHub and
+    somebody's applied a new module, you'll npm install those modules.
+
+    index.html file needs to point to main.js, not to index.js, e.g.
+    src="./main.js", because the main.js will have vanilla js but the index.js
+    will have react, which html doesn't know how to read. 
+
+        touch gitignore
+        npm init    //  Creates package.json
+        npm install //  
+        npm i react react-dom babel-loader @babel/preset-react webpack 
+        apply (in package.json) "webpack --mode=development" //  gets rid of "at least two configs are needed" warning
+            ^ in the package.json ^
+        npm run build
+            now you should have f. folders: dist (main.js); node_modules; src (index.js).
+            now you should have f. files: gitignore; package-lock.json; package.json; webpack.config.js. 
+
+        now you can use import { } 
+            e.g.    import { createRoot } from "react-dom/client";
+        now you can write createRoot, and not ReactDOM.createRoot
+            e.g.    const container = document.querySelector(`root`);
+                    const root = createRoot()
+
+    Create header.js, name it the same as the component 
+        import React etc. 
+        const Header = () => {
+            return (
+                <>
+                    <a href="google.com">Google<a/>
+                    <a href="facebook.com">Facebook</a>
+                    <a href="myspace.com">MySpace</a>
+                </>
+            )
+        }
+        export default Header // you need to have a default when you export. 
+
+        in index.js
+            import Header from "./Header.js";
+
+            npm create vite@latest
+            upon running, will ask "what is your project name?" 
+            react
+            javascript
+            follow directions
+                cd [project name]
+                npm install
+                npm run dev
+            you'll need a split terminal when you're running vite. 
+
+            if 404 error, make sure using correct localhost
+ -->

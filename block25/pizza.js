@@ -1,85 +1,81 @@
 const container = document.querySelector(`#root`);
 
 const App = () => {
-    const pizzas = [
-        {
-            id: 1,
-            name: `Pepperoni`,
-            toppings: [
-                `cheese`,
-                `pepperoni`,
-            ]
-        },
-        {
-            id: 2,
-            name: `Hawaiian`,
-            toppings: [
-                `pineapple`,
-                `canadian bacon`,
-                `cheese`,
-                `white onions`,
-            ]   
-        },
-        {
-            id: 3,
-            name: `Canadian`,
-            toppings: [
-                `poutine`,
-                `maple leaf`,
-                `syrup`,
-            ]
-        }
-    ]
+  const [numberOfOrders, setNumberOfOrders] = React.useState(0);
+  const [pizzas, setPizzas] = React.useState([]);
 
-    return (
-        <>
-        <h1>Pizza Jon's</h1>
-        <h3># of Pizza Orders</h3>
+  const orderPizza = () => {
+    setNumberOfOrders(numberOfOrders + 1);
+  }
 
-        <ul>
+  React.useEffect(() => {
+    setPizzas([
+      {
+        id: 1,
+        name: `Pepperoni`,
+        toppings: [
+          `cheese`,
+          `pepperoni`
+        ]
+      },
+      {
+        id: 2,
+        name: `Hawaiian`,
+        toppings: [
+          `pineapple`,
+          `canadian bacon`,
+          `white onions`
+        ]
+      },
+      {
+        id: 3,
+        name: `Canadian`,
+        toppings: [
+          `poutine`,
+          `maple leaf`,
+          `syrup`
+        ]
+      }
+    ])
+  }, [])
+  
+
+  return (
+    <>
+      <h1>Pizza Jon's</h1>
+      <h3># of Pizza Orders: {numberOfOrders}</h3>
+
+      <ul>
         {
-            pizzas.map((pizza) => {
-                console.log(pizza);
-                return (
-                    <Pizza 
-                        singlePizza={singlePizza}/> 
-                )
-            })
+          pizzas.map((singlePizza) => {
+            return (
+              <Pizza 
+                singlePizza={singlePizza}
+                creator='Jon'
+                orderPizza={orderPizza}
+              />
+            )
+          })
         }
-        </ul>
-        </>
-    )
+      </ul>
+    </>
+  )
 }
 
-const Pizza = (props) => {
-    console.log(props)
-    const singlePizza = props.singlePizza;
-    return (
+const Pizza = ({singlePizza, creator, orderPizza}) => {  
+  return (
+    <>
+      <h3 key={singlePizza.id}>{singlePizza.name}</h3>
+      <h5>Creator: {creator}</h5>
+      {
+        singlePizza.toppings.map((topping) => {
+          return <li key={topping}>{topping}</li>
+        })
+      }
+      <button onClick={orderPizza}>Order Pizza</button>
+    </>
+  )
+}
 
-                <>
-                <h3 key={pizza.id}>{pizza.name}</h3>
-                {pizza.toppings.map((topping) => {
-                    return <li key={topping}>{topping}</li>
-                    // return (
-                    //     <>
-                    //     <p>{pizza.topping}</p>
-                    //     </>
-                    // )
-            })
-        }
-                </>
-                )
-            }
-        
 const root = ReactDOM.createRoot(container);
-root.render(< App />);
-// console.log(root); 
-
-
-// You usually don't need to complete the whole interview question in order to
-// succeed. You need to demonstrate a correct thought process. It's possible to
-// solve the question without succeeding. 
-
-// Console.log as you go. 
-
-// Write e.g. (<App />) rather than (App) so that React doesn't think that "App" is a variable. 
+root.render(<App />);
