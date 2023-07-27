@@ -25,6 +25,8 @@
     src="./main.js", because the main.js will have vanilla js but the index.js
     will have react, which html doesn't know how to read. 
 
+    npm = node package manager
+
         touch gitignore
         npm init    //  Creates package.json
         npm install //  
@@ -34,6 +36,7 @@
         npm run build
             now you should have f. folders: dist (main.js); node_modules; src (index.js).
             now you should have f. files: gitignore; package-lock.json; package.json; webpack.config.js. 
+            "build": "webpack" tells vite to run the webpack when building the website. 
 
         now you can use import { } 
             e.g.    import { createRoot } from "react-dom/client";
