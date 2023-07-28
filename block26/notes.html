@@ -43,6 +43,12 @@
         now you can write createRoot, and not ReactDOM.createRoot
             e.g.    const container = document.querySelector(`root`);
                     const root = createRoot()
+    
+    You call/invoke function w/ parens, e.g. "call useEffect" = "useEffect()
+    You may put an anonymous function inside a function so that the function isn't invoked prematurely. Without that, a function might run on an infinite loop.  
+    Anonymous function is just a function with parens but nothing else???
+    If you want something to run once, then use an empty array. If you want it to run every time something changes, then give it something to watch. 
+    
 
     Create header.js, name it the same as the component 
         import React etc. 
